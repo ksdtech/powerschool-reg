@@ -1,0 +1,1 @@
+function displayListing(){var i=$j("#listing .sample"),e=$j("#listing #sample_last").nextAll(),s=e.size()>1;s?i.hide():e.hide()}$j(document).ready(function(){displayListing(),$j("#form12").isHappy({onSubmit:onRegFormSubmit,fields:{".kikdir_options":{required:!0,message:"Required field."}}})});

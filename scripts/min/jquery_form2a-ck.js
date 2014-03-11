@@ -1,0 +1,1 @@
+function set_up_reg_year(){var r=$j.trim($j("#orig_reg_year").val());if(!r){var a=$j("#orig_entrydate").val(),e=a.match(/(\d+)\/\d+\/(\d+)/);if(e){var t=parseInt(e[1]),i=parseInt(e[2]);6>=t&&(i-=1),r=i+"-"+(i+1)}$j(".reg_year").val(r)}}$j(document).ready(function(){set_up_reg_year(),$j("#form2").isHappy({onSubmit:onItrFormSubmit})});

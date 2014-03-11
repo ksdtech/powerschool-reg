@@ -1,0 +1,519 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url("reset.css");
+
+html, body.pslogin {
+	height: 100%;
+}
+
+body {
+	font-family: Arial, sans-Serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	color: #333333;
+}
+
+body.report, body.popUp {
+	background: #FFF;
+}
+
+strong, label, b {
+	font-weight: bold;
+	color: #333333;
+}
+.bold {
+	font-weight: bold;
+}
+#branding {
+	width: 50%;
+	float: left;
+	margin:0 0 30px 0;
+}
+h1{
+	font-size:   130%;
+	font-weight: bold;
+	color:       #000000;
+	margin: 20px 0 10px 0;
+	page-break-before: auto;
+}
+h2, h3, h4{
+    font-size:   110%;
+    font-weight: bold;
+    color:       #000000;
+    margin: 20px 0 10px 0;
+    page-break-before: auto;
+}
+ul.text, .psHelp ul, .psHelp ol {
+    padding:0 0 0 30px;
+    page-break-after: auto;
+}
+.psHelp ol li{
+    list-style-type: decimal;
+    margin:0 10px 10px 0;
+}
+ul.text li, .psHelp ul li {
+    list-style-type: disc;
+    margin:0 10px 10px 0;
+}
+#nav-main, #nav-main-phone, #tools, #userName, #nav-secondary, #usercontext-bar, #currentscope, .tabs, a.button, button, .button, #breadcrumbs, #feedbackHover, #feedbackSend, #btnContMax, #btnNoNav, .screenonly, #pluginLinkDrawerPanel {
+	display:none;
+}
+#content {
+	clear: both;
+}
+.account-photo {
+	float: left;
+	margin-right: 10px;
+	}
+#contentright td, #contentright tr {
+	font-size: 10px;
+}
+
+table {
+	font-size: 11px;
+	margin-bottom: 20px;
+	width: 98%;
+}
+table.grid {
+	border: 1px solid #CCC;
+	border-collapse: collapse;
+	margin: 10px 0 20px;
+	width: 98%;
+}
+
+.box-round table.grid {
+	margin: 10px auto;
+}
+
+table.gridSched td {
+	padding: 2px;
+}
+table.grid th {
+	border: 1px solid #CCC;
+}
+
+table.grid td {
+	border: 1px solid #CCC;
+	padding: 3px;
+	vertical-align: top;
+}
+
+table.linkDescList tr:nth-child(odd) {
+	background-color: #D7EBF4;
+}
+
+input {
+	border:none;
+	}
+strong, label, b, .bold {
+    font-weight: bold;
+    color: #333333;
+}
+img {
+	border:none;
+}
+#students-list {
+	width:100%;
+	border-bottom: 1px solid #000;
+	clear:both;
+}
+#students-list li {
+	list-style:none;
+}
+#students-list li {
+	display:none;
+}
+#students-list li.selected {
+display:inline;
+font-weight:bold;
+font-size:150%;
+}
+a {
+	text-decoration:none;
+	color:#000;
+}
+
+#print-disclaimer {
+	margin:20px 0;
+}
+#footer {
+	width: 95%;
+	margin: 15px auto;
+	
+	min-width: 800px;
+	max-width:1200px;
+}
+.columns {
+	-moz-column-width: 15em;
+	-webkit-column-width: 15em;
+	column-width: 15em;
+	-moz-column-fill: balance;
+	-webkit-column-fill: balance;
+	column-fill: balance;
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	column-gap: 1em;
+}
+#content-main ol.columns, #content-main ul.columns {
+	padding: 0;
+	}
+
+#content-main ol.columns li, #content-main ul.columns li {
+	margin: 0 0 0 36px;
+	padding: 0;
+}
+body.psHelp #legal{
+    display: block;
+     width: 100%;
+}
+body.psHelp #legal p {
+	margin: 0;
+	width: 100%;
+	 text-align: center;
+	 font-size: 80%;
+	}
+body.psHelp p {
+	margin: 0 10px 10px;
+}
+body.psHelp table p {
+	margin: 0 0 10px;
+}
+body.psHelp p:last-child {
+	margin: 0 0 0px;
+}
+body.psHelp td {
+	padding: 6px;
+	}
+body.psHelp input[type="text"],body.psHelp table {
+	margin-left: 10px;
+}
+body.psHelp ol table, body.psHelp ul table {
+	margin-left: 0px;
+}
+#legal p{
+font-size:9px;
+	color:#999999;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	margin:0 0 0 66px;
+	padding:0;
+	text-align:left;
+}
+#pearsonLogoLegal{
+	margin:0;
+	float:left;
+}
+#print-school {
+text-align:right;
+	float:right;
+	font-size:120%;
+	font-weight:bold;
+}
+#print-school span {
+	font-size:100%;
+}
+
+#notifIcon {
+    display:none;
+}
+.noprint {
+	display:none;
+	}
+.noprint.box-round{
+	display:none;
+	}	
+.pagebefore	{ page-break-before: always; }
+.pageafter 	{ page-break-after: always; }
+.avoid-page		{ page-break-inside: avoid; }
+
+/* PSJ-17059 - copied from screen.css */
+.box-round {
+	display: table;
+}
+
+.box-round .bulletin h2,.box-round .bulletin h3,td h2,td h3 {
+	background: none;
+	margin: 10px 0;
+	padding: 0;
+	text-indent: 0;
+}
+
+
+
+.box-round {
+	background: /*#FFF*/ ;
+	border: 1px solid #CCC;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	margin: 10px 20px 10px 20px;
+	width: 90%;
+	/*	float: left;*/
+}
+
+.box-round h2,.box-tabbed h2 {
+	font-size: 110%;
+	font-weight: bold;
+	color: inherit;
+	margin: 10px 0 10px 0;
+	padding: 0 10px;
+	background-color: #E2E2E2;
+	position: relative;
+}
+
+.box-round h2:first-child.expanded, .box-round h2.expanded, h2.expanded {
+
+}
+
+.box-round h2:first-child, .box-round dl:first-child, .box-round h3:first-child {
+	margin: 0 0 10px 0;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-topleft: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+.alt, .oddRow, .oddrow {
+	background: #EDF3FE;
+}
+
+table,table div table {
+	margin: 10px 0;
+	width: 100%;
+	border: none;
+}
+
+td, tr {
+	border: none;
+	padding: 4px;
+	font-size: 11px;
+	line-height: 1em;
+}
+
+th {
+	font-weight: bold;
+	color: #000;
+	height: 1em;
+	padding: 0px 2px;
+	background: #D3E0F0;
+}
+
+p > b {
+	font-size: 110%;
+	font-weight: bold;
+	color: #000000;
+	margin: 5px 0 10px 5px;
+	/*display:block;*/
+}
+
+tr.headerRow {
+	background: #D3E0F0;
+	/*text-align:left;*/
+}
+
+tr.evenRow {
+	background-color: #FFF;
+	display: table-row;
+}
+
+tr.oddRow {
+	background-color: #edf3fe;
+	display: table-row;
+}
+
+.hide, .hidden {
+	display: none !important;
+}
+
+#pluginLinkDrawerPanel.collapsed {
+	display: none;
+}
+
+#psDialog { /*fixes Safari bug where content in dialog jumps*/
+	overflow: hidden;
+}
+
+#psDialog:after { /*fixes Safari bug where content in dialog jumps*/
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	border: none;
+}
+
+.progressBar {
+	width: 200px;
+	height: 12px;
+	position: relative;
+	border: 1px solid #999;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+.progressBar * {
+	position: absolute;
+	display: block;
+	width: 200px;
+	font-size: 12px;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	text-align: right;
+	margin-right: 2px;
+	border-right: 1px solid #ddd;
+	color: #333;
+	line-height: 12px;
+}
+
+.prog_blue {
+	background-color: #25ccca;
+}
+
+.prog_darkgreen {
+	background-color: #149500;
+}
+
+.prog_green {
+	background-color: #66ff62;
+}
+
+.prog_yellow {
+	background-color: #f9ff65;
+}
+
+.prog_orange {
+	background-color: #f89e12;
+}
+
+.prog_red {
+	background-color: #c86568;
+}
+
+.prog_white {
+	background-color: white;
+}
+
+.colorLegendSquare {
+	width: 1em;
+	height: 1em;
+	border: 1px solid #ccc;
+	display: inline-block;
+	*display: inline; /*ie7*/
+	position: relative;
+	overflow: hidden;
+}
+
+.colorLegend {
+	display: inline-block;
+	*display: inline; /*ie7*/
+	position: relative;
+	padding-left: 2px;
+	padding-right: 10px;
+	top: -2px;
+}
+
+.bgLevel0 {
+	background-color: #3E7EDC;
+}
+
+.bgLevel1 {
+	background-color: #6D9ADB;
+}
+
+.bgLevel2 {
+	background-color: #99B4DC;
+}
+
+.bgLevel3 {
+	background-color: #B0C2DC;
+}
+
+.bgLevel4 {
+	background-color: #C6CFDC;
+}
+
+.bgLevel5 {
+	background-color: #FFF;
+}
+
+.bgLightLevel0 {
+	background-color: #a2c2fd;
+}
+
+.bgLightLevel1 {
+	background-color: #bfd5fd;
+}
+
+.bgLightLevel2 {
+	background-color: #d4e3fd;
+}
+
+.bgLightLevel3 {
+	background-color: #e1ebfd;
+}
+
+.bgLightLevel4 {
+	background-color: #edf3fe;
+}
+
+.bgLightLevel4_5 {
+	background-color: #f2f6fc;
+}
+
+.bgLightLevel5 {
+	background-color: #fcfcfc;
+}
+	/* @group Colors used in Schedule Matrix */
+.matrix_1 {	background-color: PowderBlue;}
+.matrix_2 {	background-color: Peachpuff;}
+.matrix_3 {	background-color: Gold;}
+.matrix_4 {	background-color: MediumPurple;}
+.matrix_5 {	background-color: LightGreen;}
+.matrix_6 {	background-color: Khaki;}
+.matrix_7 {	background-color: Gainsboro;}
+.matrix_8 {	background-color: SteelBlue;}
+.matrix_9 {	background-color: IndianRed;}
+.matrix_10 { background-color: Goldenrod;}
+.matrix_11 { background-color: Orchid;}
+.matrix_12 { background-color: MediumAquamarine;}
+.matrix_13 { background-color: DarkKhaki;}
+.matrix_14 { background-color: LightSlateGray;}
+.matrix_15 { background-color: CornflowerBlue;}
+.matrix_16 { background-color: LightBlue;}
+.matrix_17 { background-color: SandyBrown;}
+.matrix_18 { background-color: PaleVioletRed;}
+.matrix_19 { background-color: LightGoldenrodYellow;}
+.matrix_20 { background-color: Pink;}
+.matrix_21 { background-color: DarkSeaGreen;}
+.matrix_22 { background-color: Coral;}
+.matrix_23 { background-color: DarkGray;}
+.matrix_24 { background-color: Salmon;}
+.matrix_25 { background-color: Plum;}
+.matrix_26 { background-color: MediumSeaGreen;}
+.matrix_27 { background-color: Burlywood;}
+.matrix_28 { background-color: Silver;}
+.matrix_29 { background-color: RoyalBlue;}
+.matrix_30 { background-color: Wheat;}
+.matrix_31 { background-color: Thistle;}
+.matrix_32 { background-color: LightSeaGreen;}
+.matrix_33 { background-color: AntiqueWhite;}
+.matrix_34 { background-color: SlateGray;}
+.matrix_35 { background-color: SkyBlue;}
+.matrix_36 { background-color: HotPink;}
+.matrix_37 { background-color: LemonChiffon;}
+.matrix_38 { background-color: MediumOrchid;}
+.matrix_39 { background-color: DarkTourquois;}
+.matrix_40 { background-color: Moccasin;}
+.matrix_41 { background-color: Mistyrose;}
+.matrix_42 { background-color: RoyalBlue;}
+.matrix_43 { background-color: LavenderBlush;}
+.matrix_44 { background-color: Beige;}
+.matrix_45 { background-color: MediumSlateBlue;}
+.matrix_46 { background-color: PaleGreen;}
+.matrix_47 { background-color: PaleGoldenrod;}
+.matrix_48 { background-color: LightSteelBlue;}
+.matrix_49 { background-color: CadetBlue;}
+	

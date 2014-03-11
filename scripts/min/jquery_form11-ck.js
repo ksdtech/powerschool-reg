@@ -1,0 +1,1 @@
+$j(document).ready(function(){$j("#form11").isHappy({onSubmit:onRegFormSubmit,fields:{".pta_contact":{required:!0,message:"Required field."},".pta_room_parent":{required:!0,message:"Required field."}}})});

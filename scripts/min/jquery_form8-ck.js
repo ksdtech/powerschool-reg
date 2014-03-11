@@ -1,0 +1,1 @@
+$j(document).ready(function(){$j("#form8").isHappy({onSubmit:onRegFormSubmit,fields:{"#lang_earliest":{required:!0,message:"Required field."},"#lang_primary":{required:!0,message:"Required field."},"#lang_spoken":{required:!0,message:"Required field."},"#lang_adults":{required:!0,message:"Required field."}}})});

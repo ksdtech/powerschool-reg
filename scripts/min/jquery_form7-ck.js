@@ -1,0 +1,1 @@
+$j(document).ready(function(){$j("#form7").isHappy({onSubmit:onRegFormSubmit,fields:{"#first_usa_school":{required:"sometimes",test:happy.emptyOrDate,message:"Please enter in format M/D/YYYY."},".immigrant":{required:!0,message:"Required field."},".hispanic_ethnicity":{required:!0,message:"Required field."},"#parent_edu":{required:!0,message:"Required field."}}})});
