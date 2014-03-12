@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Enrollment Information - PowerSchool Parent Access</title>
+<title>Medical Information - PowerSchool Parent Access</title>
 <!-- ~[wc:UI_js_includes] -->
 <link rel="stylesheet" type="text/css" href="/scripts/yui/container/assets/skins/sam/container.css" />
 <link rel="stylesheet" type="text/css" href="/scripts/yui/button/assets/skins/sam/button.css">
@@ -538,8 +539,8 @@ window.scrollTo(0,1);
 <script src="/scripts/formatters.js" type="text/javascript"></script>
 <script src="/scripts/happy.js" type="text/javascript"></script>
 <script src="/scripts/happy.methods.js" type="text/javascript"></script>
-<script src="/scripts/jquery_itr.js" type="text/javascript"></script>
-<script src="/scripts/jquery_form2.js" type="text/javascript"></script>
+<script src="/scripts/jquery_form.js" type="text/javascript"></script>
+<script src="/scripts/jquery_form9.js" type="text/javascript"></script>
 </head>
 <body id="parentPageTemp" class="psparent">
 
@@ -647,348 +648,233 @@ window.scrollTo(0,1);
   <div id="content-main" class="group">
 <!-- end[wc:guardian_header] -->
 
-<h1>Enrollment Information</h1>
+<h1>Medical Information</h1>
 
 <div id="changes-saved-container">
 </div>
 
 <!-- begin form action -->
-<form class="noSubmitLoading" id="form2" action="changesrecorded.html" method="post">
-<input type="hidden" name="backpage" id="backpage" value="01-registration" />
-<input type="hidden" name="backtitle" id="backtitle" value="Main Registration Page" />
-<input type="hidden" name="donetitle" id="donetitle" value="Main Registration Page. This is the only page required." />
-<input type="hidden" name="nextpage" id="nextpage" value="03-student" />
-<input type="hidden" name="nexttitle" id="nexttitle" value="Page 3 - Name, Birth and Custody" />
+<form class="noSubmitLoading" id="form9" action="changesrecorded.html" method="post">
+<input type="hidden" name="backpage" value="01-registration" />
+<input type="hidden" name="backtitle" value="Main Registration Page" />
+<input type="hidden" name="nextpage" value="14-permissions" />
+<input type="hidden" name="nexttitle" value="Page 10 - Authorizations and Permissions" />
 <!-- end form action -->
-<div id="form2-contents" align="center" style="width: 98%">
-<div id="form2-setup" class="box-round group" style="width: 720px">
+<div id="form9-contents" align="center" style="width: 98%">
+<div id="form9-setup" class="box-round group" style="width: 720px">
 <table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
-<tr class="headerrow"><td colspan="3" class="bold">2a. Enrollment Information</td></tr>
-
-<tr><td class="bold" colspan="2" width="50%">Status <span class="for_reg_year" id="rys">for 2014-2015 School Year</span></td><td><select id="reg_enroll" name="[01]reg_will_attend">
-<option value="">Choose:</option>
-<option value="attending">Student will be attending Bacich or Kent</option>
-<option value="nr-graduated">Student will have graduated</option>
-<option value="nr-permanent">Student will not be attending Bacich or Kent</option>
-<option value="nr-temporary">Student is temporarily leaving the District, but may return later</option>
-<option value="unknown">Not sure if student will attend; don't know at this time</option>
-</select></td></tr>
-
-<tr class="enrolling"><td class="bold" colspan="2">Grade Level <span class="for_reg_year" id="rygl">for 2014-2015 School Year</span></td><td><select id="reg_grade_level" name="[01]reg_grade_level">
-<option value="">Choose:</option>
-<option value="TK">Transitional Kindergarten - Bacich Elementary School</option>
-<option value="K">Regular Kindergarten - Bacich Elementary School</option>
-<option value="1">1st Grade - Bacich Elementary School</option>
-<option value="2">2nd Grade - Bacich Elementary School</option>
-<option value="3">3rd Grade - Bacich Elementary School</option>
-<option value="4">4th Grade - Bacich Elementary School</option>
-<option value="5">5th Grade - Kent Middle School</option>
-<option value="6">6th Grade - Kent Middle School</option>
-<option value="7">7th Grade - Kent Middle School</option>
-<option value="8">8th Grade - Kent Middle School</option>
-<option value="-1">Student will not be attending</option>
-</select></td></tr>
-
-<tr class="not_enrolling"><td class="bold" colspan="2">Since your student is not attending, please choose a response from this list:</td><td><select id="reg_exitcode" name="[01]ExitCode">
-<option value="">Choose:</option>
-<option value="160">Student will attend another public school in California</option>
-<option value="180">Student will attend a private school in California</option>
-<option value="200">Student will attend a US school outside California</option>
-<option value="460">Student will be home schooled</option>
-<option value="240">Student is moving to another country</option>
-<option value="140">Other reason for not attending, or don't know</option>
-</select></td></tr>
-
-<tr class="not_enrolling"><td class="bold" colspan="2">Name and phone number of next school (if applicable)</td>
-<td><input name="[01]ExitComment" type="text" id="reg_exitcomment" value="" size="80"></td></tr>
-
-<tr class="headerrow enrolling"><td colspan="3" class="bold">2b. Music and Enrichment Options - Grades 5-8 Only</td></tr>
-<tr class="enrolling by_grade grade_0 grade_1 grade_2 grade_3 grade_4"><td colspan="3">
-  You do not need to fill out this form for students who will be attending
-  Bacich.  There are no enrichment choices to be made.</td></tr>
-
-<tr class="enrolling by_grade grade_5"><td colspan="3" class="bold">Fifth Grade Music Program</td></tr>
-<tr class="enrolling by_grade grade_5"><td colspan="3">All fifth graders will
-  be enrolled in Beginning Band and other enrichment classes.  
-  There are no enrichment choices to be made. 
-  Please feel free to email Mr. Martinez at <a 
-  href="mailto:mmartinez@kentfieldschools.org">mmartinez@kentfieldschools.org</a>
-  for more information about the music program at Kent.</td></tr>
-
-<tr class="enrolling by_grade grade_6"><td colspan="3" class="bold">Required Sixth Grade Performing Arts Selection</td></tr>
-<tr class="enrolling by_grade grade_6"><td colspan="3">All sixth graders 
-  must select a performing arts class (either Intermediate Band or 
-  Intermediate Chorus) that occurs during the regular school
-  day.</td></tr>
-
-<tr class="enrolling by_grade grade_6"><td colspan="3" class="bold">Sixth Grade Performing Arts: Intermediate Band</td></tr>
-<tr class="enrolling by_grade grade_6"><td colspan="3">The prerequisite for
-  intermediate band is completion of Beginning Band or by audition. The 
-  second year of instrumental music improves upon the musical and ensemble
-  skills learned in Beginning Band and adds multi-part sheet music,
-  syncopation, and major and minor scales.</td></tr>
-
-<tr class="enrolling by_grade grade_6"><td colspan="3" class="bold">Sixth Grade Performing Arts: Intermediate Chorus</td></tr>
-<tr class="enrolling by_grade grade_6"><td colspan="3">Students who choose to 
-  participate in intermediate chorus will learn musical and vocal techniques 
-  through interval training, scale studies and part singing. Song selections 
-  will range from popular to classical.</td></tr>
-
-<tr class="enrolling by_grade grade_6"><td colspan="3">Please note: enrollment in any band or choral ensemble is 
-    <strong>a full-year commitment</strong>; if you have difficulty or have questions 
-    in selecting a music program for your student, please contact Mr. 
-    Martinez at <a href="mailto:mmartinez@kentfieldschools.org">mmartinez@kentfieldschools.org</a> (preferred) or at (415) 257-0733, ext. 13 #.</td></tr>
-
-<tr class="enrolling by_grade grade_6"><td colspan="3" class="bold">Required Performing Arts Options for Sixth Grade Students</td></tr>
-<tr class="enrolling by_grade grade_6"><td width="100">&nbsp;</td>
-<td width="400"><input type="radio" name="[01]electives_6_pa" class="electives_6_pa" value="band" />6th Grade Int. Band</td>
-<td><input type="radio" name="[01]electives_6_pa" class="electives_6_pa" value="chorus" />6th Grade Int. Chorus</td></tr>
-
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3" class="bold">Seventh and Eighth Grades: Music Program and Other Zero-Period Options</td></tr>
-
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3" class="bold">Zero-Period Advanced Band</td></tr>
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3">The concert
-  band meets during zero period, which begins at 7:45 A.M. on Monday,
-  Wednesday, and Friday of each week. Concert band students must have 
-  had two to three years of previous playing experience. Emphasis is placed 
-  on gaining musical independence through more extensive scale studies,
-  technical exercises, and more advanced sheet music. Students work on 
-  music from a wide range of musical styles, including jazz and
-  classical.</td></tr>
-
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3" class="bold">Zero-Period Concert Choir</td></tr>
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3">All sixth,
-  seventh, and eighth grade students are eligible to participate in concert
-  choir which meets during zero period at 7:45 A.M. on Tuesday and Thursday
-  of each week. Continued emphasis is placed on reading music as well as two,
-  three, and even four part a&nbsp;cappella as well as accompanied singing.</td></tr>
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3">Both the advanced band and concert choir perform at least twice during the school year.</td></tr>
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3">Please note: enrollment in any band or choral ensemble is 
-    <strong>a full-year commitment</strong>; if you have difficulty or have questions 
-    in selecting a music program for your student, please contact Mr. 
-    Martinez at <a href="mailto:mmartinez@kentfieldschools.org">mmartinez@kentfieldschools.org</a> (preferred) or at (415) 257-0733, ext. 13 #.</td></tr>
-
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3" class="bold">Zero-Period Mathletes</td></tr>
-<tr class="enrolling by_grade grade_7 grade_8"><td colspan="3">Mathletes is a 
-  supportive group of 7th and 8th grade students who will compete in 
-  mathematical problem-solving competitions against teams from other middle 
-  schools in Marin County.
-  At Kent, our goal is to offer Mathletes during zero period in order to give 
-  students further opportunities to work on fun and creative problems that 
-  promote critical-thinking and problem-solving skills as well as to extend 
-  the concepts that are learned in the students' math classes.<br/>
-  The Kent Mathletes Team will meet one to two mornings a week on Tuesdays 
-  and/or Thursdays from October till Mid-March (students will be excused from 
-  Chorus if attending Mathletes). The teams will learn strategies that 
-  help in solving math problems similar to the ones given in the Mathletes 
-  competitions. There are a total of four countywide competitions that occur 
-  after school in November, December, February, and March. In joining 
-  Mathletes students will be expected to participate in the competitions and 
-  make a commitment to attend the morning classes regularly.</td></tr>
-
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Zero-Period Yearbook Committee</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">The yearbook committee 
-	will be put into place during zero period when the book is under production.  
-	It will meet one morning a week probably on Thursdays (students will be 
-	excused from Chorus if attending Yearbook).  Key characteristics of any 
-	Yearbook Committee member will be reliability and humility. This 
-	opportunity is a commitment to attend the morning classes regularly when 
-	the book is under construction, and members will be required to sacrifice 
-	a few lunchtimes a month till the yearbook is sent out to be printed should 
-	it be necessary. Many yearbook alumnus go on to work on high school 
-	yearbooks, on high school newspapers such as The Redwood Bark, and in other 
-	clubs and committees. Yearbook is hard but rewarding work; students take 
-	great pride and satisfaction in contributing to the final product that 
-	becomes the Kent Annual.</td></tr>
-
-<tr class="enrolling by_grade grade_7"><td colspan="3" class="bold">Zero-Period Options for 7th Grade Students</td></tr>
-<tr class="enrolling by_grade grade_7"><td width="100">&nbsp;</td>
-<td width="400"><input type="radio" name="[01]electives_7_band" class="electives_7_band" value="Yes" />Zero-Period Band M/W/F</td>
-<td><input type="radio" name="[01]electives_7_band" class="electives_7_band" value="No" />No Zero-Period Band</td></tr>
-<tr class="enrolling by_grade grade_7"><td>&nbsp;</td>
-<td><input type="radio" name="[01]electives_7_choir" class="electives_7_choir" value="Yes" />Zero-Period Concert Choir T/Th</td>
-<td><input type="radio" name="[01]electives_7_choir" class="electives_7_choir" value="No" />No Zero-Period Concert Choir</td></tr>
-<tr class="enrolling by_grade grade_7"><td>&nbsp;</td>
-<td><input type="radio" name="[01]electives_7_mathletes" class="electives_7_mathletes" value="Yes" />Zero-Period Mathletes T/Th</td>
-<td><input type="radio" name="[01]electives_7_mathletes" class="electives_7_mathletes" value="No" />No Zero-Period Mathletes</td></tr>
-
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Zero-Period Options for 8th Grade Students</td></tr>
-<tr class="enrolling by_grade grade_8"><td width="100">&nbsp;</td>
-<td width="400"><input type="radio" name="[01]electives_8_band" class="electives_8_band" value="Yes" />Zero-Period Band M/W/F</td>
-<td><input type="radio" name="[01]electives_8_band" class="electives_8_band" value="No" />No Zero-Period Band</td></tr>
-<tr class="enrolling by_grade grade_8"><td>&nbsp;</td>
-<td><input type="radio" name="[01]electives_8_choir" class="electives_8_choir" value="Yes" />Zero-Period Choir T/Th</td>
-<td><input type="radio" name="[01]electives_8_choir" class="electives_8_choir" value="No" />No Zero-Period Choir</td></tr>
-<tr class="enrolling by_grade grade_8"><td>&nbsp;</td>
-<td><input type="radio" name="[01]electives_8_mathletes" class="electives_8_mathletes" value="Yes" />Zero-Period Mathletes T/Th</td>
-<td><input type="radio" name="[01]electives_8_mathletes" class="electives_8_mathletes" value="No" />No Zero-Period Mathletes</td></tr>
-<tr class="enrolling by_grade grade_8"><td>&nbsp;</td>
-<td><input type="radio" name="[01]electives_8_yearbook" class="electives_8_yearbook" value="Yes" />Zero-Period Yearbook</td>
-<td><input type="radio" name="[01]electives_8_yearbook" class="electives_8_yearbook" value="No" />No Zero-Period Yearbook</td></tr>
-
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Eighth Grade Enrichment Classes</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">Eighth grade students
-  will be enrolled in trimester-long enrichment classes. Every 
-  eighth-grade student will take a required trimester class of
-  Expressions; as well, students will be enrolled in <strong>two</strong> 
-  different enrichment classes selected from the following list:
-<ul>
-<li>Architecture</li>
-<li>Art</li>
-<li>Journalism</li>
-<li>Video</li>
-<li>Wood Shop</li>
-</ul></td></tr>
-
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Eighth Grade Architecture</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">Design a residence, a
-  3-D virtual museum on computer software or explore the world of
-  sustainable, green design. In this course, students will design a project
-  that realizes their own interests by bringing them to life. Students will
-  have the choice to use computer software to enhance their design or to 
-  build a scale model of their project. Examples of past projects have
-  included a unique sushi restaurant with an interior waterway, 
-  a detailed interior design of a residence, a fashion runway, a museum, 
-  and a skateboard park.</tr></td>
+<tr class="headerrow"><td colspan="3" class="bold">9. Medical Information</td></tr>
+<tr><td colspan="3"><b>Important Note:</b>: Any medical information changes must
+  be completed here and also emailed directly to the District nurse,
+  Becky Gayman, at 
+  <a href="mailto:bgayman@marin.k12.ca.us">bgayman@marin.k12.ca.us</a></td></tr>
   
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Eighth Grade Art</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">In this class students
-  extend their understanding of the Elements and Principles of Design learned
-  in their fifth and sixth grade experiences. Through projects in drawing,
-  printmaking, and design, the student artists employ the fundamental 
-  elements of line, shape, value, texture, color and form to explore the
-  interrelationship of these ideas with principles such as balance,
-  repetition, variation, emphasis and unity.  They may use ink, graphite,
-  charcoal, chalk/oil pastel, prismacolor, acrylic and watercolor.<br/>
-  
-  In addition to their regular curriculum, students have studio workshops
-  on block days. These workshops are process oriented designed to further
-  enhance their development as artists and their understanding of 
-  techniques and materials.</td></tr>
+<tr class="headerrow"><td colspan="3" class="bold">9a. Medication - Daily and 72 hour Supply</td></tr>
+<tr><td colspan="3">In order to administer prescription or over-the-counter medication at school, 
+the District requires a medication form, signed by a doctor.  The forms for daily medication 
+(<a target="ksorg" href="http://www.kentfieldschools.org/cms/lib05/CA01001012/Centricity/shared/reg1314/0-medications-authorization.pdf">"Authorization to Administer Medication"</a>; 
+a version is also available in 
+<a target="ksorg" href="http://www.kentfieldschools.org/cms/lib05/CA01001012/Centricity/shared/reg1314/0-medications-authorization-Spanish.pdf">Spanish</a>)
+and for 72 hour emergency medication 
+(<a target="ksorg" href="http://www.kentfieldschools.org/cms/lib05/CA01001012/Centricity/shared/reg1314/0-Medications-72hr-Disaster.pdf">"72 Hour Medication Form for Emergency Preparedness"</a>;
+or version in 
+<a target="ksorg" href="http://www.kentfieldschools.org/cms/lib05/CA01001012/Centricity/shared/reg1314/0-Medications-72hr-Disaster-Spanish.pdf">Spanish</a>) can be downloaded by clicking on the links above,
+or picked up in one of the school offices.  More information is available from the 
+Marin County Office of Education
+<a target="ksorg" href="http://jade.marinschools.org/Health-Wellness/manual/Pages/default.aspx">School Health Manual page</a>.<br/><br/>
+Please complete all appropriate form(s) and return them to the school office.
+You must bring the required medication in the original container, labeled with 
+the student's name, on the first day of school or
+as soon as new medication is dispensed.  If you need additional help, please
+contact the District nurse, Becky Gayman, at 
+<a href="mailto:bgayman@marin.k12.ca.us">bgayman@marin.k12.ca.us</a></td></tr>
 
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Eighth Grade Journalism</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">Students in this 
-  technology-rich class will track down the latest Kent news stories, report 
-  them in best journalistic style in our online newspaper, film and edit 
-  videos of the Kent stories, and present the videos along with the bulletin 
-  in our morning broadcast.  Collaboration, writing style, technical skills, 
-  and organization are emphasized.</td></tr>
-
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Eighth Grade Video</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">Video Boot Camp is an 
-  advanced enrichment where students will learn the fundamental techniques 
-  of movie making from start to finish. This hands on class teaches visual 
-  story telling using camera, lighting, sound, and editing techniques. 
-  Students will create a short video production at the end of the trimester. 
-  Creativity, resourcefulness, and responsibility are emphasized.</td></tr>
-  
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Eighth Grade Wood Shop</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">From a choice of
-  hardwoods, design and build that heirloom project for yourself or your
-  family; one that will be passed on from generation to generation. 
-  Students will learn advanced techniques using woodworking machinery
-  to build their masterpieces. Previous projects have included musical
-  instruments, furniture, skateboards and advanced lathe work; many of these
-  projects have won best of show at the Marin County Fair and ribbons at the
-  California State Fair.</td></tr>
-  
-<tr class="enrolling by_grade grade_8"><td colspan="3" class="bold">Enrichment Selections for 8th Grade Students (In Order of Preference)</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">Please select your 
-  student's choices in their order of preference
-  using the drop-down menus below. Because of the intricacies of
-  scheduling, we will try to make sure that your
-  student will get at least one of his/her top two choices.</td></tr>
-<tr class="enrolling by_grade grade_8"><td colspan="3">If you have any questions about the eighth-grade enrichment classes,
-please email Ms. Osterman at
-<a href="mailto:losterman@kentfieldschools.org">losterman@kentfieldschools.org</a></td></tr>
-<tr class="enrolling by_grade grade_8">
-<td colspan="2" class="bold">1st Choice Enrichment</td>
-<td><select name="[01]electives_8_enrich1" id="electives_8_enrich1">
-<option value="">Choose:</option>
-<option value="architecture">Architecture</option>
-<option value="art">Art</option>
-<option value="journalism">Journalism</option>
-<option value="video">Video</option>
-<option value="shop">Wood Shop</option>
-</select></td></tr>
-
-<tr class="enrolling by_grade grade_8">
-<td colspan="2" class="bold">2nd Choice Enrichment</td>
-<td><select name="[01]electives_8_enrich2" id="electives_8_enrich2">
-<option value="">Choose:</option>
-<option value="architecture">Architecture</option>
-<option value="art">Art</option>
-<option value="journalism">Journalism</option>
-<option value="video">Video</option>
-<option value="shop">Wood Shop</option>
-</select></td></tr>
-
-<tr class="enrolling by_grade grade_8">
-<td colspan="2" class="bold">3rd Choice Enrichment</td>
-<td><select name="[01]electives_8_enrich3" id="electives_8_enrich3">
-<option value="">Choose:</option>
-<option value="architecture">Architecture</option>
-<option value="art">Art</option>
-<option value="journalism">Journalism</option>
-<option value="video">Video</option>
-<option value="shop">Wood Shop</option>
-</select></td></tr>
-
-<tr class="headerrow enrolling by_grade grade_6 grade_7 grade_8"><td colspan="3" class="bold">2c. Personal Locker Information (Grades 6-8 Only)</td></tr>
-<tr class="enrolling by_grade grade_6 grade_7 grade_8"><td colspan="3">
-  All sixth, seventh and eighth students will be assigned a numbered 
-  personal locker at the start of each school year. Students must provide a 
-  combination or key lock for the locker. When you know the combination or if 
-  your student will be using a key lock, please provide the 
-  combination or let us know that it is a key lock in the space below.
-  If you change locks, please update the information on this page.<br/>
-  The student is responsible for memorizing his or her lock combination.  
-  Please be aware that if a key lock is purchased, the student is solely 
-  responsible for knowing the location of the key to that lock.<br/>
-  Enter a letter combination like this: "P-A-S-S"<br/>
-  Enter a numeric combination like this: "32-20-45"<br/>
-  If the lock is a key lock, enter the word "key"</td></tr> 
-<tr class="enrolling by_grade grade_6 grade_7 grade_8"><td class="bold" colspan="2">Personal locker number</td>
-<td>~(locker_number)</td></tr>
-<tr class="enrolling by_grade grade_6 grade_7 grade_8"><td class="bold" colspan="2">Personal locker combination (if applicable)</td>
-<td><input type="text" name="[01]locker_combination" value="" /></input></td></tr>
-
-<tr class="headerrow enrolling by_grade grade_6 grade_7 grade_8"><td colspan="3" class="bold">2d. PE Locker Information (Grades 6-8 Only)</td></tr>
-<tr class="enrolling by_grade grade_6 grade_7 grade_8"><td colspan="3">
-  Kent Middle School students in sixth, seventh, and eighth grades will use the 
-  locker rooms to change for Physical Education class, and will be assigned 
-  a locker during the first week of school during their physical education 
-  class period.  Each student is 
-  required to provide their own combination lock for use before and after 
-  each class period in order to keep their personal items safe.  
-  If you change locks, please update the information on this page.
-  <br/>
-  The student is responsible for memorizing his or her lock combination.  
-  If there exist special circumstances where a student is unable to use a 
-  combination lock, they may purchase a key lock and write "key" in the 
-  required field.  Please be aware that if a key lock is purchased, 
-  the student is solely responsible for knowing the location of the key 
-  to that lock.<br/>
-  Enter a letter combination like this: "P-A-S-S"<br/>
-  Enter a numeric combination like this: "32-20-45"<br/>
-  If the lock is a key lock, enter the word "key"</td></tr> 
-<tr class="enrolling by_grade grade_6 grade_7 grade_8"><td class="bold" colspan="2">PE locker combination (if applicable)</td>
-<td><input type="text" name="[01]pe_locker_combination" value="" /></input></td></tr>
-
-
-<tr class="private"><td colspan="3" class="bold">Last updated at 
-<input type="text" id="upd_at" name="[01]form2_updated_at" value="" /> by 
-<input type="text" id="upd_by" name="[01]form2_updated_by" value="" /><input type="hidden" id="userid" value="G~[x:userid]" />
-</td></tr>
-<tr class="private"><td colspan="3" class="bold">Registration Year
-<input type="text" id="reg_year" class="reg_year" name="[01]reg_year" value="" />
-<input type="hidden" id="orig_entrydate" name="orig_entrydate" value="~([01]entrydate)" />
-<input type="hidden" id="orig_reg_year" name="orig_reg_year" value="~([01]reg_year)" />
-</td></tr>
-
-<tr><td colspan="3" align="right"><input type="hidden" name="ac" value="autosendupdate" /><!-- ~[submitbutton] --><button type="submit" id="btnSubmit" name="btnSubmit">Submit</button></td></tr>
+<tr><td class="bold">Does the student take medication at home or at school?</td>
+<td width="75"><input type="radio" class="requires_meds" name="[01]Requires_Meds" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input type="radio" class="requires_meds" name="[01]Requires_Meds" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr><td class="bold">Will you be providing medication for the student to take at school?</td>
+<td width="75"><input type="radio" class="school_meds" name="[01]School_Meds" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input type="radio" class="school_meds" name="[01]School_Meds" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr><td class="bold">Will you be providing 72-hour medication to be used in an emergency?</td>
+<td width="75"><input type="radio" class="emergency_meds" name="[01]Emergency_Meds" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input type="radio" class="emergency_meds" name="[01]Emergency_Meds" value="" />No&nbsp;&nbsp;</td>
+</tr>
 </table>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+<tr class="headerrow"><td colspan="4" class="bold">9b. Health Insurance and Providers</td></tr>
+<tr><td colspan="4">Select <b>Private Health Insurance</b> for HMO's, PPO's, Kaiser, etc.<br/>
+  Note: Please see the Marin County Office of Education <a href="http://jade.marinschools.org/Health-Wellness/manual/Pages/default.aspx">School Health Manual page</a> for information about free
+  and low cost local health
+  insurance programs, including an Interest Form to apply for these programs.<br/>
+  Or follow these links to get online information about these insurance programs:
+<ul>
+<li>California Healthy Families - <a target="ksorg" href="http://www.healthyfamilies.ca.gov">http://www.healthyfamilies.ca.gov</a></li>
+<li>CaliforniaKids Healthcare Foundation - <a target="ksorg" href="http://www.californiakids.org">http://www.californiakids.org</a></li>
+<li>Medi-Cal (Calif. Dept. of Health Care Services) - Individuals Page - <a target="ksorg" href="http://www.dhcs.ca.gov/individuals/Pages/default.aspx">http://www.dhcs.ca.gov/individuals/Pages/default.aspx</a></li>
+</ul></td></tr>
+<tr><td width="150" class="bold">Health Insurance Type</td>
+<td width="260"><select id="health_ins" name="[01]Health_Ins_Type">
+  <option value="">Choose...</option>
+  <option value="private">Private Health Insurance</option>
+  <option value="hfamilies">Healthy Families</option>
+  <option value="calkids">California Kids</option>
+  <option value="medi-cal">Medi-Cal</option>
+  <option value="none">No Health Insurance</option>
+</select></td>  
+<td width="102" class="bold">Medi-Cal #<br/>
+  (if Applicable)</td>
+<td width="162"><input type="text" id="medi_cal_num" name="[01]Medi_Cal_Num" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Preferred Hospital</td>
+<td><input type="text" id="emergency_hospital" name="[01]Emergency_Hospital" value="" size="30" /></td>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr><td class="bold">Primary Physician Name</td>
+<td><input type="text" name="[01]Doctor_Name" value="" size="30" /></td>
+<td class="bold">Phone</td>
+<td><input id="_phone" type="text" name="[01]Doctor_Phone" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Secondary Physician Name</td>
+<td><input type="text" name="[01]Doctor2_Name" value="" size="30" /></td>
+<td class="bold">Phone</td>
+<td><input id="_phone" type="text" name="[01]Doctor2_Phone" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Dentist Name</td>
+<td><input type="text" name="[01]Dentist_Name" value="" size="30" /></td>
+<td class="bold">Phone</td>
+<td><input id="_phone" type="text" name="[01]Dentist_Phone" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Health Plan/Group Name</td>
+<td><input type="text" name="[01]Medical_Carrier" value="" size="30" /></td>
+<td class="bold">Policy #</td>
+<td><input type="text" name="[01]Medical_Policy" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Dental Plan Name</td>
+<td><input type="text" name="[01]Dental_Carrier" value="" size="30" /></td>
+<td class="bold">Policy #</td>
+<td><input type="text" name="[01]Dental_Policy" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Vision Plan Name</td>
+<td><input type="text" name="[01]Optical_Carrier" value="" size="30" /></td>
+<td class="bold">Policy #</td>
+<td><input type="text" name="[01]Optical_Policy" value="" size="16" /></td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+<tr class="headerrow"><td colspan="5" class="bold">9c. Vision and Hearing</td></tr>
+<tr><td width="200" class="bold">Does the student wear eyeglasses or contact lenses?</td>
+<td width="100">&nbsp;</td>
+<td width="75"><input name="[01]Eyeglasses" type="radio" class="eyeglasses" id="eyeglasses_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td width="75"><input name="[01]Eyeglasses" type="radio" class="eyeglasses" value="" />No&nbsp;&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td class="bold">If so, when are they to be worn?</td>
+<td><input type="checkbox" class="eyeglasses_chk" name="[01]Eyeglasses_Board" value="1" />Board work</td>
+<td><input type="checkbox" class="eyeglasses_chk" name="[01]Eyeglasses_Reading" value="1" />Reading&nbsp;</td>
+<td colspan="2"><input type="checkbox" class="eyeglasses_chk" name="[01]Eyeglasses_Always" value="1" />All the time&nbsp;</td>
+</tr>
+<tr><td class="bold">Date of last eye exam?</td>
+<td colspan="4"><input type="text" id="last_eye_exam" name="[01]h_Last_Eye_Exam" value="" size="16" /></td>
+</tr>
+<tr><td class="bold">Does the student wear a hearing aid?</td>
+<td>&nbsp;</td>
+<td><input type="radio" class="hearing_aid" name="[01]h_Hearing_Aid" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input type="radio" class="hearing_aid" name="[01]h_Hearing_Aid" value="" />No&nbsp;&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+<tr class="headerrow"><td colspan="7" class="bold">Medical Conditions</td></tr>
+<tr><td colspan="8">Does the student have any of the following conditions?</td></tr>
+<tr><td width="150" class="bold">9d. Severe Allergies?</td>
+<td width="75"><input name="[01]Allergies_Severe" type="radio" class="allergies" id="allergies_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td width="75"><input name="[01]Allergies_Severe" type="radio" class="allergies" value="" />No&nbsp;&nbsp;</td>
+<td>&nbsp;</td>
+<td width="130" class="bold">Allergy treatment:</td>
+<td width="75"><input type="checkbox" class="allergies_chk" name="[01]Allergies_Epi_Pen" value="1" />Epi-Pen&nbsp;</td>
+<td><input type="checkbox" class="allergies_chk" name="[01]Allergies_Benadryl" value="1" />Benadryl&nbsp;</td>
+</tr>
+<tr><td class="bold">Allergic To:</td>
+<td><input type="checkbox" class="allergies_chk" name="[01]Allergies_Food" value="1" />Food&nbsp;</td>
+<td colspan="3"><input type="checkbox" class="allergies_chk" name="[01]Allergies_Insects" value="1" />Bees or stinging insects&nbsp;</td>
+<td><input type="checkbox" class="allergies_chk" name="[01]Allergies_Drugs" value="1" />Drugs&nbsp;</td>
+<td><input type="checkbox" class="allergies_chk" name="[01]Allergies_Other" value="1" />Other&nbsp;</td>
+</tr>
+<tr valign="top"><td colspan="2" class="bold">Description of Allergies:</td>
+<td colspan="5"><textarea name="[01]Allergies" class="allergies_chk" id="allergies_txt" wrap="soft" cols="40" rows="3"></textarea></td>
+</tr>
+<tr><td class="bold">9e. Asthma?</td>
+<td><input name="[01]Asthma" type="radio" class="asthma" id="asthma_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Asthma" type="radio" class="asthma" value="" />No&nbsp;&nbsp;</td>
+<td>&nbsp;</td>
+<td class="bold">Asthma treatment:</td>
+<td><input type="checkbox" class="asthma_chk" name="[01]Asthma_Inhaler" value="1" />Inhaler&nbsp;</td>
+<td><input type="checkbox" class="asthma_chk" name="[01]Asthma_Medication" value="1" />Daily medication&nbsp;</td>
+</tr>
+<tr><td class="bold">9f. Seizures?</td>
+<td><input name="[01]Seizures" type="radio" class="seizures" id="seizures_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Seizures" type="radio" class="seizures" value="" />No&nbsp;&nbsp;</td>
+<td>&nbsp;</td>
+<td class="bold">Daily medication?</td>
+<td><input type="radio" class="seizures_chk" name="[01]Seizures_Medication" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input type="radio" class="seizures_chk" name="[01]Seizures_Medication" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr><td class="bold">9g. Diabetes?</td>
+<td><input name="[01]Diabetes" type="radio" class="diabetes" id="diabetes_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Diabetes" type="radio" class="diabetes" value="" />No&nbsp;&nbsp;</td>
+<td>&nbsp;</td>
+<td class="bold">Insulin dependent?</td>
+<td><input type="radio" class="diabetes_chk" name="[01]Diabetes_Insulin" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input type="radio" class="diabetes_chk" name="[01]Diabetes_Insulin" value="" />No&nbsp;&nbsp;</td>
+</tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+<tr class="headerrow"><td class="bold" colspan="7">Other Medical Conditions</td></tr>
+<tr><td colspan="7">Check any applicable boxes and provide details in the text fields.</td></tr>
+<tr><td colspan="5" class="bold">9h. Behavior problems</td>
+<td><input name="[01]Behavior_Problems" type="radio" class="behavior" id="behavior_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Behavior_Problems" type="radio" class="behavior" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr valign="top"><td colspan="2" class="bold">Description:</td>
+<td colspan="5"><textarea class="behavior_chk" id="behavior_txt" name="[01]Behavior_Issues" wrap="soft" cols="40" rows="3"></textarea></td>
+</tr>
+<tr><td colspan="5" class="bold">9i. Movement limitations</td>
+<td><input name="[01]Movement_Limits" type="radio" class="movement" id="movement_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Movement_Limits" type="radio" class="movement" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr valign="top"><td colspan="2" class="bold">Description:</td>
+<td colspan="5"><textarea class="movement_chk" id="movement_txt" name="[01]Movement_Limits_Desc" wrap="soft" cols="40" rows="3"></textarea></td>
+</tr>
+<tr><td colspan="5" class="bold">9j. Other conditions</td>
+<td><input name="[01]Medical_Other" type="radio" class="med_other" id="med_other_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Medical_Other" type="radio" class="med_other" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr valign="top"><td colspan="2" class="bold">Description:</td>
+<td colspan="5"><textarea name="[01]Medical_Considerations" class="med_other_chk" id="med_other_txt" wrap="soft" cols="40" rows="3"></textarea></td>
+</tr>
+<tr><td colspan="5" class="bold">9k. Recent illness, hospitalization or surgery</td>
+<td><input name="[01]Illness_Recent" type="radio" class="illness" id="illness_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Illness_Recent" type="radio" class="illness" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr valign="top"><td colspan="2" class="bold">Dates and Description:</td>
+<td colspan="5"><textarea name="[01]Illness_Desc" class="illness_chk" id="illness_txt" wrap="soft" cols="40" rows="3"></textarea></td>
+</tr>
+<tr><td colspan="5" class="bold">9l. Medical condition that might require care or accommodation at school</td>
+<td><input name="[01]Medical_Accom" type="radio" class="med_accom" id="med_accom_yes" value="1" />Yes&nbsp;&nbsp;</td>
+<td><input name="[01]Medical_Accom" type="radio" class="med_accom" value="" />No&nbsp;&nbsp;</td>
+</tr>
+<tr valign="top"><td colspan="2" class="bold">Description and Accommodations:</td>
+<td colspan="5"><textarea name="[01]Medical_Accom_Desc" class="med_accom_chk" id="med_accom_txt" wrap="soft" cols="40" rows="3"></textarea></td>
+</tr>
+<tr class="private"><td colspan="7" class="bold">Last updated at 
+<input type="text" id="upd_at" name="[01]form8_updated_at" value="" /> by 
+<input type="text" id="upd_by" name="[01]form8_updated_by" value="" /><input type="hidden" id="userid" value="G~[x:userid]" /></td>
+</tr>
 
+<tr><td colspan="7" align="right"><input type="hidden" name="ac" value="autosendupdate" /><!-- ~[submitbutton] --><button type="submit" id="btnSubmit" name="btnSubmit">Submit</button></td></tr>
+</table>
 </div>
 </div>
 </form>

@@ -655,23 +655,76 @@ window.scrollTo(0,1);
 <div id="forms-contents" align="center" style="width: 98%">
 <div id="forms-setup" class="box-round group" style="width: 720px">
 <input type="hidden" id="reg_enroll" name="[01]reg_will_attend" value="">
-<input type="hidden" id="form2_updated_at" name="[01]form2_updated_at" value="">
 <input type="hidden" id="form3_updated_at" name="[01]form3_updated_at" value="">
 <input type="hidden" id="form4_updated_at" name="[01]form4_updated_at" value="">
-<input type="hidden" id="form5_updated_at" name="[01]form5_updated_at" value="">
 <input type="hidden" id="form6_updated_at" name="[01]form6_updated_at" value="">
-<input type="hidden" id="form7_updated_at" name="[01]form7_updated_at" value="">
-<input type="hidden" id="form8_updated_at" name="[01]form8_updated_at" value="">
-<input type="hidden" id="form9_updated_at" name="[01]form9_updated_at" value="">
-<input type="hidden" id="form10_updated_at" name="[01]form10_updated_at" value="">
-<input type="hidden" id="form11_updated_at" name="[01]form11_updated_at" value="">
-<input type="hidden" id="form12_updated_at" name="[01]form12_updated_at" value="">
+<input type="hidden" id="form8_updated_at" name="[01]form9_updated_at" value="">
+<input type="hidden" id="form9_updated_at" name="[01]form10_updated_at" value="">
+<input type="hidden" id="form12_updated_at" name="[01]form11_updated_at" value="">
 <input type="hidden" id="form13_updated_at" name="[01]form13_updated_at" value="">
 <input type="hidden" id="form14_updated_at" name="[01]form14_updated_at" value="">
+<input type="hidden" id="form14_updated_at" name="[01]form15_updated_at" value="">
 <table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+
+<div id="changes-saved-container">
+</div>
+
+<!-- begin form action -->
+<form class="noSubmitLoading" id="form2" action="changesrecorded.html" method="post">
+<input type="hidden" name="backpage" id="backpage" value="01-registration" />
+<input type="hidden" name="backtitle" id="backtitle" value="Main Registration Page" />
+<input type="hidden" name="donetitle" id="donetitle" value="Main Registration Page. This is the only page required." />
+<input type="hidden" name="nextpage" id="nextpage" value="03-student" />
+<input type="hidden" name="nexttitle" id="nexttitle" value="Page 3 - Name, Birth and Custody" />
+<!-- end form action -->
+
+<table border="0" cellpadding="0" cellspacing="0" style="width: 700px">
+<tr class="headerrow"><td colspan="3" class="bold">1. Enrollment Information</td></tr>
+
+<tr><td width="50%">School year you are registering this student for:</td><td><select id="reg_school_year" name="[01]reg_school_year">
+<option value="">Choose:</option>
+<option value="2014-2015" selected="selected">2014-2015 (Next year)</option>
+<option value="2013-2014">2013-2014 (Current year)</option>
+</select></td></tr>
+
+<tr><td width="50%">Status <span class="for_reg_year" id="rys">for 2014-2015 School Year</span></td><td><select id="reg_enroll" name="[01]reg_will_attend">
+<option value="">Choose:</option>
+<option value="attending">Student will be attending Bacich or Kent</option>
+<option value="nr-graduated">Student will have graduated</option>
+<option value="nr-permanent">Student will not be attending Bacich or Kent</option>
+<option value="nr-temporary">Student is temporarily leaving the District, but may return later</option>
+<option value="unknown">Not sure if student will attend; don't know at this time</option>
+</select></td></tr>
+
+<tr class="enrolling"><td>Grade Level <span class="for_reg_year" id="rygl">for 2014-2015 School Year</span></td><td><select id="reg_grade_level" name="[01]reg_grade_level">
+<option value="">Choose:</option>
+<option value="TK">Transitional Kindergarten - Bacich Elementary School</option>
+<option value="K">Regular Kindergarten - Bacich Elementary School</option>
+<option value="1">1st Grade - Bacich Elementary School</option>
+<option value="2">2nd Grade - Bacich Elementary School</option>
+<option value="3">3rd Grade - Bacich Elementary School</option>
+<option value="4">4th Grade - Bacich Elementary School</option>
+<option value="5">5th Grade - Kent Middle School</option>
+<option value="6">6th Grade - Kent Middle School</option>
+<option value="7">7th Grade - Kent Middle School</option>
+<option value="8">8th Grade - Kent Middle School</option>
+<option value="-1">Student will not be attending</option>
+</select></td></tr>
+
+<tr class="not_enrolling"><td>If your student will not be attending, please choose a response from this list:</td><td><select id="reg_exitcode" name="[01]ExitCode">
+<option value="">Choose:</option>
+<option value="160">Student will attend another public school in California</option>
+<option value="180">Student will attend a private school in California</option>
+<option value="200">Student will attend a US school outside California</option>
+<option value="460">Student will be home schooled</option>
+<option value="240">Student is moving to another country</option>
+<option value="140">Other reason for not attending, or don't know</option>
+</select></td></tr>
+
+<tr class="not_enrolling"><td>Name and phone number of next school (if applicable)</td>
+<td><input name="[01]ExitComment" type="text" id="reg_exitcomment" value="" size="50"></td></tr>
 	
-	
-<tr class="headerrow"><td colspan="2" class="bold">1. Status and Links to Registration Pages</td></tr>
+<tr class="headerrow"><td colspan="2" class="bold">2. Status and Links to Registration Pages</td></tr>
 <tr><td colspan="2">Click the blue links in the list below to go to each 
 	of the pages of the registration system. Check marks indicate the 
 	pages that have been submitted and validated within the current
@@ -683,12 +736,35 @@ window.scrollTo(0,1);
 
 <tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form3_status" value="1" readonly><a href="03-student.html?actpage=01-registration">Student Information</a></td></tr>
 <tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form4_status" value="1" readonly><a href="04-family.html?actpage=01-registration">Family Information</a></td></tr>
-<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form6_status" value="1" readonly><a href="regform6.html?actpage=01-registration">Page 6 - Authorized Adults to Pick up Your Child in Case of Emergency</a></td></tr>
-<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form9_status" value="1" readonly><a href="regform9.html?actpage=01-registration">Page 9 - Medical Information</a></td></tr>
-<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form10_status" value="1" readonly><a href="regform10.html?actpage=01-registration">Page 10 - Authorizations and Permissions</a></td></tr>
-<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form11_status" value="1" readonly><a href="regform11.html?actpage=01-registration">Page 11 - PTA</a></td></tr>
-<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form13_status" value="1" readonly><a href="regform13.html?actpage=01-registration">Page 13 - KSD Safe Routes to School Program</a></td></tr>
-<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form14_status" value="1" readonly><a href="regform14.html?actpage=01-registration">Page 14 - Acknowledgement and Responsibility for Student</a></td></tr>
+<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form6_status" value="1" readonly><a href="06-emergency.html?actpage=01-registration">Emergency Procedures and Contacts</a></td></tr>
+<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form9_status" value="1" readonly><a href="09-medical.html?actpage=01-registration">Medical Information</a></td></tr>
+<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form10_status" value="1" readonly><a href="10-electives.html?actpage=01-registration">Electives</a></td></tr>
+<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form13_status" value="1" readonly><a href="13-orgs.html?actpage=01-registration">PTA and Safe Routes to School</a></td></tr>
+<tr class="enrolling"><td colspan="2"><input type="checkbox" class="chk_status" id="form14_status" value="1" readonly><a href="14-permissions.html?actpage=01-registration">Authorizations and Permissions</a></td></tr>
+
+<tr class="headerrow"><td class="bold" colspan="2">3. Acknowledgement and Responsibility for Student</td></tr>
+<tr><td colspan="2">I (we) have thoroughly reviewed and filled out all of the 
+  registration pages that are applicable to this student and all pages are marked as 
+  checked above.
+  To the best of my (our) knowledge, all the information reported  on all of 
+  these registration pages is true and correct.<br/> 
+  I (we) assume full responsibility  for my (our) student in all school matters. 
+  If there is a change in any of this information, I (we) will update it promptly.</td></tr>
+<tr><td>&nbsp;</td>
+<td><input type="radio" name="[01]responsibility_for_student" class="resp_for_student" value="Yes">&nbsp;YES&nbsp;
+<input type="radio" name="[01]responsibility_for_student" class="resp_for_student" value="No">&nbsp;NO&nbsp;</td></tr>
+<tr><td colspan="2">By selecting <strong>Yes</strong>, I (we) agree to the previous statement.</td></tr>
+<tr><td>Signatures (typed)</td>
+<td><input type="text" name="[01]responsibility_sig_1" id="responsibility_sig_1" value="" size="30" maxlength="60">&nbsp;and&nbsp;<input type="text" name="[01]responsibility_sig_2" value="" size="30" maxlength="60"></td></tr>
+<tr><td>Date</td>
+<td><input type="text" name="[01]responsibility_date" id="responsibility_date" value="" size="15"></td></tr>
+
+<tr class="private"><td class="bold">Last updated at 
+<input type="text" id="upd_at" name="[01]form1_updated_at" value="" /> by 
+<input type="text" id="upd_by" name="[01]form1_updated_by" value="" /><input type="hidden" id="userid" value="G~[x:userid]" /></td>
+</tr>
+
+<tr><td colspan="2" align="right"><input type="hidden" name="ac" value="autosendupdate" /><!-- ~[submitbutton] --><button type="submit" id="btnSubmit" name="btnSubmit">Submit</button></td></tr>
 
 <tr class="headerrow"><td colspan="2" class="bold">Detailed Instructions</td></tr>
 <tr><td colspan="2"><strong>Validation:</strong> 
@@ -746,7 +822,7 @@ is as follows:
   obtained from the student's doctor (including the<br/>
   required Tdap booster for incoming 7th and 8th grade students)</li>
 <li>Authorization to Administer Medication and 72-Hour Medication Forms, if applicable,<br/>
-  signed by a physician. See <a href="regform9.html?actpage=01-registration">Page 9</a> for more information</li>
+  signed by a physician. See <a href="08-medical.html?actpage=01-registration">Page 9</a> for more information</li>
 <li>An electronic signature of completion of the registration pages, made by 
 	checking the box in the <strong>Acknowledgement and Responsibility for Student</strong> 
 	on Page 14, and filling out your name and the date signed.</li>
@@ -769,7 +845,7 @@ is as follows:
   or picked up at the school office.</li>
 <li>Authorization to Administer Medication and 72-Hour Medication Forms, 
   if applicable, signed by a physician.<br/>
-  See <a href="regform9.html?actpage=01-registration">Page 9</a> for more information</li>
+  See <a href="08-medical.html?actpage=01-registration">Page 9</a> for more information</li>
 <li>Request for School Records from Previous School for 1st through 8th grade only (available from the school office)</li>
 <li>Any other information you wish the school to know about your child. Please deliver<br/>
   informational documents to the school office, or call the school office to discuss.</li>
@@ -791,8 +867,6 @@ the required documents, please speak with
 for new students at Kent School, parents must schedule Math and Language Arts placement tests with the
 Kent School Office (see phone number above) as soon as possible.</td></tr>
 
-
-<tr><td colspan="2" align="right"><input type="hidden" name="ac" value="autosendupdate">~[submitbutton]</td></tr>
 
 </table>
 </div>
